@@ -20,13 +20,13 @@ public class Screen2 extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rview);
         vegitableList = new ArrayList<>();
-        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", "The potato is a root vegetable native to the Americas..."));
-        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", "The potato is a root vegetable native to the Americas..."));
+        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.potato, "Potato", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
+        vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
 
         recyclerView.setHasFixedSize(false);
 

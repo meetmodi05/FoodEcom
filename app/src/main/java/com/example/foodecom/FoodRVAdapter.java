@@ -1,5 +1,7 @@
 package com.example.foodecom;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +37,17 @@ public class FoodRVAdapter extends RecyclerView.Adapter<FoodRVAdapter.ViewHolder
         holder.title.setText(vegitableModel.getTitle());
         holder.price.setText(vegitableModel.getPrice());
         holder.description.setText(vegitableModel.getDescription());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), Screen3.class);
+                intent.putExtra("image", vegitableModel.getImage());
+                intent.putExtra("title", vegitableModel.getTitle());
+                intent.putExtra("price", vegitableModel.getPrice());
+                view.getContext().startActivity(intent);
+
+            }
+        });
         holder.food_img.setImageResource(vegitableModelArrayList.get(position).getImage());
         Glide.with(holder.food_img).load(vegitableModel.getImage()).circleCrop().override(312, 312).into(holder.food_img);
     }

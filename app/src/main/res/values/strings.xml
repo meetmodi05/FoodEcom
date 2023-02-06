@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">FoodEcom</string>
-    <string name="itemDescirption">The potato is a root vegetable native to the Americas...</string>
+    <string name="item_description">All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</string>
+    <string name="item_desc">The potato is a root vegetable native to the Americas...</string>
+    <string name="minerals_desc">Potassium,Phosphorus,Magnesium</string>
+
+    <string name="pros1">Potatoes are rich in vitamins, minerals and antioxidants, which make them very healthy</string>
+    <string name="pros2">Studies have linked potatoes and their nutrients to a variety of impressive health benefits, including improved blood sugar control, reduced heart disease risk and higher immunity. They may also improve digestive health and combat signs of aging</string>
+    <string name="pros3">Potatoes are rich in vitamins, minerals and antioxidants, which make them very healthy</string>
+    <string name="pros4">Potatoes are rich in vitamins, minerals and antioxidants, which make them very healthy</string>
+
 </resources>

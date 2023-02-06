@@ -1,10 +1,10 @@
 package com.example.foodecom;
 
 public class VegitableModel {
-    int image;
-    String title, price, description;
+    int image,description;
+    String title, price;
 
-    public VegitableModel(int image, String title, String price, String description) {
+    public VegitableModel(int image, String title, String price, int description) {
         this.image = image;
         this.title = title;
         this.price = price;
@@ -35,11 +35,11 @@ public class VegitableModel {
         this.price = price;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description = Integer.parseInt(description);
     }
 }
