@@ -102,8 +102,8 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/vitamins_bg"
                     android:text="C"
+                    android:gravity="center"
                     android:layout_margin="5dp"
-                    android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textColor="@color/orange"
                     android:textSize="15sp" />
@@ -114,7 +114,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/vitamins_bg"
                     android:text="B1"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textAllCaps="true"
                     android:layout_margin="5dp"
                     android:textColor="@color/orange"
@@ -127,7 +127,7 @@
                     android:background="@drawable/vitamins_bg"
                     android:text="B3"
                     android:layout_margin="5dp"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textAllCaps="true"
                     android:textColor="@color/orange"
                     android:textSize="15sp" />
@@ -139,7 +139,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/vitamins_bg"
                     android:text="B6"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textAllCaps="true"
                     android:textColor="@color/orange"
                     android:textSize="15sp" />

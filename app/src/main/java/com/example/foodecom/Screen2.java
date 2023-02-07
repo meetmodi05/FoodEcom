@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -28,11 +30,9 @@ public class Screen2 extends AppCompatActivity {
         vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
         vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
 
-        recyclerView.setHasFixedSize(false);
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL);
+        recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
-        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(false);
         FoodRVAdapter foodRVAdapter = new FoodRVAdapter(this, vegitableList);
         recyclerView.setAdapter(foodRVAdapter);
     }
