@@ -92,33 +92,57 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/inner_ll1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:padding="9dp">
 
                 <TextView
                     android:id="@+id/vita_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@drawable/vitamins_bg"
-                    android:backgroundTint="@color/grey"
                     android:text="C"
+                    android:layout_margin="5dp"
                     android:textAlignment="center"
+                    android:textAllCaps="true"
                     android:textColor="@color/orange"
                     android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/vita_b1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:background="@drawable/vitamins_bg"
-                    android:backgroundTint="@color/grey"
                     android:text="B1"
                     android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:layout_margin="5dp"
                     android:textColor="@color/orange"
                     android:textSize="15sp" />
 
+                <TextView
+                    android:id="@+id/vita_b3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/vitamins_bg"
+                    android:text="B3"
+                    android:layout_margin="5dp"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/vita_b6"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/vitamins_bg"
+                    android:text="B6"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
