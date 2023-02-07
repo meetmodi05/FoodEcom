@@ -5,14 +5,14 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/iv_play"
+        android:id="@+id/iv_play_cons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="fill_horizontal"
-        android:src="@drawable/baseline_play_arrow_24" />
+        android:src="@drawable/baseline_play_arrow2_24" />
 
     <TextView
-        android:id="@+id/tv_pros"
+        android:id="@+id/tv_cons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Potatoes are rich in vitamins, minerals and antioxidants, which make them very healthy"

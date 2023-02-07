@@ -166,8 +166,8 @@
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
-            <ListView
-                android:id="@+id/lv_pros"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pros"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none" />
@@ -180,8 +180,9 @@
                 android:text="Cons"
                 android:textColor="@color/black"
                 android:textSize="17sp" />
-            <ListView
-                android:id="@+id/lv_cons"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none" />

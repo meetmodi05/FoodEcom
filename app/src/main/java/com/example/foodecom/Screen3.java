@@ -1,12 +1,14 @@
 package com.example.foodecom;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
@@ -21,13 +23,12 @@ public class Screen3 extends AppCompatActivity {
     TextView tv_desc, tv_title, tv_price;
     WormDotsIndicator dotsIndicator;
     ImageView iv_back;
-    ListView lpros, lcons;
+    RecyclerView rv_pros, rv_cons;
     String title, price;
-    ProsModel prosModel;
-    ConsModel consModel;
     ArrayList<ProsModel> plist;
-    ArrayAdapter<ProsModel> prosModelArrayAdapter;
-//    ArrayList<ConsModel> consModelArrayList;
+    ArrayList<ConsModel> clist;
+    ArrayAdapter<String> prosModelArrayAdapter;
+    ProsRVAdapter prosRVAdapter;
 
     @Override
     public void onBackPressed() {
@@ -44,9 +45,9 @@ public class Screen3 extends AppCompatActivity {
         tv_title = findViewById(R.id.title);
         tv_price = findViewById(R.id.price);
         iv_back = findViewById(R.id.iv_back);
-        lpros = findViewById(R.id.lv_pros);
-        lcons = findViewById(R.id.lv_cons);
         dotsIndicator = findViewById(R.id.worm_dots_indicator);
+        rv_pros = findViewById(R.id.rv_pros);
+        rv_cons = findViewById(R.id.rv_cons);
 
         imageModelArrayList = new ArrayList<>();
         imageModelArrayList.add(new ImageModel(R.drawable.food));
@@ -63,14 +64,32 @@ public class Screen3 extends AppCompatActivity {
         tv_title.setText(title);
         tv_price.setText(price);
 
-        plist = new ArrayList<ProsModel>();
-        plist.add(new ProsModel(getResources().getString(R.string.pros1)));
-        plist.add(new ProsModel(getResources().getString(R.string.pros2)));
-        plist.add(new ProsModel(getResources().getString(R.string.pros3)));
+        plist = new ArrayList<>();
+        plist.add(new ProsModel(getResources().getString(R.string.pros1), R.drawable.baseline_play_arrow_24));
+        plist.add(new ProsModel(getResources().getString(R.string.pros2), R.drawable.baseline_play_arrow_24));
+        plist.add(new ProsModel(getResources().getString(R.string.pros3), R.drawable.baseline_play_arrow_24));
+        plist.add(new ProsModel(getResources().getString(R.string.pros4), R.drawable.baseline_play_arrow_24));
 
-        prosModelArrayAdapter = new ArrayAdapter<>(this, R.layout.pros_layout, R.id.tv_pros, plist);
-        lpros.setAdapter(prosModelArrayAdapter);
-//        lcons.setAdapter(prosModelArrayAdapter);
+        clist = new ArrayList<>();
+        clist.add(new ConsModel((getResources().getString(R.string.pros1)), R.drawable.baseline_play_arrow2_24));
+        clist.add(new ConsModel((getResources().getString(R.string.pros2)), R.drawable.baseline_play_arrow2_24));
+        clist.add(new ConsModel((getResources().getString(R.string.pros3)), R.drawable.baseline_play_arrow2_24));
+        clist.add(new ConsModel((getResources().getString(R.string.pros4)), R.drawable.baseline_play_arrow2_24));
 
+        rv_pros.setHasFixedSize(false);
+        rv_pros.setLayoutManager(new LinearLayoutManager(this));
+        prosRVAdapter = new ProsRVAdapter(this, plist);
+        rv_pros.setAdapter(prosRVAdapter);
+
+        rv_cons.setLayoutManager(new LinearLayoutManager(this));
+        ConsRVAdapter consRVAdapter = new ConsRVAdapter(this, clist);
+        rv_cons.setAdapter(consRVAdapter);
+
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
