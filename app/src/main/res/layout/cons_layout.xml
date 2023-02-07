@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="fill_horizontal"
+        android:src="@drawable/baseline_play_arrow2_24" />
+
+    <TextView
+        android:id="@+id/tv_pros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potatoes are rich in vitamins, minerals and antioxidants, which make them very healthy"
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+</LinearLayout>
