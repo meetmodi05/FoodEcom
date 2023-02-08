@@ -30,7 +30,7 @@ public class Screen2 extends AppCompatActivity {
         vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
         vegitableList.add(new VegitableModel(R.drawable.onion, "Onion", "₹20", R.string.item_desc));
 
-        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayout.VERTICAL);
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
         FoodRVAdapter foodRVAdapter = new FoodRVAdapter(this, vegitableList);
